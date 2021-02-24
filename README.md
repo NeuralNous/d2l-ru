@@ -19,20 +19,20 @@
 
 This open-source book represents our attempt to make deep learning approachable, teaching you the concepts, the context, and the code. The entire book is drafted in Jupyter notebooks, seamlessly integrating exposition figures, math, and interactive examples with self-contained code.
 
-Our goal is to offer a resource that could
-1. be freely available for everyone;
+Наша цель это предложить ресурс который мог бы:
+1. быть бесплатно доступным для всех;
 1. offer sufficient technical depth to provide a starting point on the path to actually becoming an applied machine learning scientist;
 1. include runnable code, showing readers how to solve problems in practice;
 1. allow for rapid updates, both by us and also by the community at large;
 1. be complemented by a forum for interactive discussion of technical details and to answer questions.
 
-## Universities Using D2L
+## Университеты использующие D2L
 <p align="center">
   <img width="600"  src="static/frontpage/_images/map.png">
 </p>
 
 
-## Cool Papers Using D2L
+## Качественные заметки использвуюзие D2L
 
 1. [**Universal Average-Case Optimality of Polyak Momentum**](https://arxiv.org/pdf/2002.04664.pdf). D. Scieur, F. Pedregosan. *International Conference on Machine Learning, 2020*
 
@@ -59,7 +59,7 @@ Our goal is to offer a resource that could
 </details>
 
 
-If you find this book useful, please star (★) this repository or cite this book using the following bibtex entry:
+Если вы находите эту книгу полезной, то пожалуйсто поставьте звезду (★) этому репозиторию. Цитируйте эту книгу использую bibtex:
 
 ```
 @book{zhang2020dive,
