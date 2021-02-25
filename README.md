@@ -44,7 +44,7 @@
 
 1. [**Diagnosing Parkinson by Using Deep Autoencoder Neural Network**](https://link.springer.com/chapter/10.1007/978-981-15-6325-6_5). U. Kose, O. Deperlioglu, J. Alzubi, B. Patrut. *Deep Learning for Medical Decision Support Systems, 2020*
 
-<details><summary>more</summary>
+<details><summary>Ещё</summary>
 
 1. [**Descending through a Crowded Valley--Benchmarking Deep Learning Optimizers**](https://arxiv.org/pdf/2007.01547.pdf). R. Schmidt, F. Schneider, P. Hennig.
 
