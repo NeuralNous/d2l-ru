@@ -76,24 +76,24 @@
 > <p>"Менее чем за десять лет революция ИИ охватила все сферы нашей повседневной жизни-от исследовательских лабораторий до широких отраслей промышленности. D2L - это отличная книга о глубоком обучении, которая заслуживает внимания всех, кто хочет узнать, почему глубокое обучение вызвало революцию ИИ: самую мощную технологическую силу нашего времени."</p>
 > <b>&mdash; Jensen Huang, Основатель и генеральный директор, NVIDIA</b>
 
-> <p>"This is a timely, fascinating book, providing with not only a comprehensive overview of deep learning principles but also detailed algorithms with hands-on programming code, and moreover, a state-of-the-art introduction to deep learning in computer vision and natural language processing. Dive into this book if you want to dive into deep learning!"</p>
-> <b>&mdash; Jiawei Han, Michael Aiken Chair Professor, University of Illinois at Urbana-Champaign</b>
+> <p>"Это своевременная и увлекательная книга представляющая не только исчерпывающий обзор принципов глубокого обучения, но и разборы алогритмов с примерами в коде и более. Своевременное представление в глубое обучение в компьютерном зрении и обработке языка. Погрузитезь в эту книгу если вы хотите погрузиться в глубокое обучение!"</p>
+> <b>&mdash; Jiawei Han, Michael Aiken Chair Professor, Иллинойский университет в Урбана-Шампейне</b>
 
-> <p>"This is a highly welcome addition to the machine learning literature, with a focus on hands-on experience implemented via the integration of Jupyter notebooks. Students of deep learning should find this invaluable to become proficient in this field."</p>
-> <b>&mdash; Bernhard Schölkopf, Director, Max Planck Institute for Intelligent Systems</b>
+> <p>"Это великолепное дополнение к литературе по машинному обучению с фокусом на получении опыта реализованного при помощи интеграции с Jupyter ноутбуками. Изучающие глубокое обучение могут использовать этот ресурс чтобы стать профессионалом в этой области."</p>
+> <b>&mdash; Bernhard Schölkopf, Директор, Институт интеллектуальных систем Макса Планка</b>
 
 
 ## Сотрудничество ([Узнайте как](https://d2l.ai/chapter_appendix-tools-for-deep-learning/contributing.html))
 
 This open source book has benefited from pedagogical suggestions, typo corrections, and other improvements from community contributors. Your help is valuable for making the book better for everyone.
 
-**Dear [D2L contributors](https://github.com/d2l-ai/d2l-en/graphs/contributors), please email your GitHub ID and name to d2lbook.en AT gmail DOT com so your name will appear on the [acknowledgments](https://d2l.ai/chapter_preface/index.html#Acknowledgments). Thanks.**
+**Дорогие [D2L помошники](https://github.com/d2l-ai/d2l-en/graphs/contributors), пожалуйста пришлите нам GitHub ID и имя на d2lbook.en@gmail.com чтобы ваше имя появилось [благодарность](https://d2l.ai/chapter_preface/index.html#Acknowledgments). Спасибо.**
 
 
-## License Summary
+## Лицензия
 
-This open source book is made available under the Creative Commons Attribution-ShareAlike 4.0 International License. See [LICENSE](LICENSE) file.
+Эта открытая книга доступна под Creative Commons Attribution-ShareAlike 4.0 International License. Подробнее [LICENSE](LICENSE) файл.
 
-The sample and reference code within this open source book is made available under a modified MIT license. See the [LICENSE-SAMPLECODE](LICENSE-SAMPLECODE) file.
+Образец и пример кода доступен под модифицированной лицензией MIT. Подробнее [LICENSE-SAMPLECODE](LICENSE-SAMPLECODE) файл .
 
-[Chinese version](https://github.com/d2l-ai/d2l-zh) | [Discuss and report issues](https://discuss.d2l.ai/) | [Code of conduct](CODE_OF_CONDUCT.md) | [Other Information](INFO.md)
+[Китайская версия](https://github.com/d2l-ai/d2l-zh) | [Обсуждения и указание ошибок](https://discuss.d2l.ai/) | [Правила участия](CODE_OF_CONDUCT.md) | [Другое](INFO.md)
