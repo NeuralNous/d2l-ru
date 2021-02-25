@@ -85,8 +85,7 @@
 
 ## Сотрудничество ([Узнайте как](https://d2l.ai/chapter_appendix-tools-for-deep-learning/contributing.html))
 
-This open source book has benefited from pedagogical suggestions, typo corrections, and other improvements from community contributors. Your help is valuable for making the book better for everyone.
-
+Эта книга с получила пользу от педагогических предложений, исправлений опечаток и других улучшений от участников сообщества. Ваша помощь ценна для того, чтобы сделать книгу лучше для всех.
 **Дорогие [D2L помошники](https://github.com/d2l-ai/d2l-en/graphs/contributors), пожалуйста пришлите нам GitHub ID и имя на d2lbook.en@gmail.com чтобы ваше имя появилось [благодарность](https://d2l.ai/chapter_preface/index.html#Acknowledgments). Спасибо.**
 
 
