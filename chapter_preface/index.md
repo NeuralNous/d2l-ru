@@ -1,20 +1,21 @@
-# Preface
+# Введение
 
-Just a few years ago, there were no legions of deep learning scientists
-developing intelligent products and services at major companies and startups.
-When the youngest among us (the authors) entered the field,
-machine learning did not command headlines in daily newspapers.
-Our parents had no idea what machine learning was,
-let alone why we might prefer it to a career in medicine or law.
-Machine learning was a forward-looking academic discipline
-with a narrow set of real-world applications.
-And those applications, e.g., speech recognition and computer vision,
-required so much domain knowledge that they were often regarded
-as separate areas entirely for which machine learning was one small component.
-Neural networks then, the antecedents of the deep learning models
-that we focus on in this book, were regarded as outmoded tools.
+Буквально пару лет назад не было легионов специалистов по глубокому обучению
+разрабатывающих умные продукты и сервисы в больших компаниях и стартапах.
+Когда самый молодый из авторов попал в эту сферу, машинное обучение
+не показывалось в заголовках ежедненых газет.
+Наши родители не имели представление что такое машинное обучение,
+не говоря уже о том почему мы предпочли его медицине или закону.
+Машинное обучение было перспективной академической дисциплиной с 
+большим количеством применений в реальной жизни.
+И эти применения, такие как распознавание речи или компьютерное зрение 
+требовали так много знаний в предметной области, что рассматривались отдельно, 
+будто машинное обучение это просто маленькая часть этого.
+Затем нейронные сети, предпосылки моделей глубого обучения.
+То на чём мы остановимся в книге считалось устаревшим инструментом
 
 
+В последние 5 лет глубокое обучение застало мир врасплох,
 In just the past five years, deep learning has taken the world by surprise,
 driving rapid progress in fields as diverse as computer vision,
 natural language processing, automatic speech recognition,
