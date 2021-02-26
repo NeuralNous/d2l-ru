@@ -35,20 +35,19 @@
 
 ### Единое место объединяющее код, математику и Html
 
-For any computing technology to reach its full impact,
-it must be well-understood, well-documented, and supported by
-mature, well-maintained tools.
-The key ideas should be clearly distilled,
-minimizing the onboarding time needing to bring new practitioners up to date.
-Mature libraries should automate common tasks,
-and exemplar code should make it easy for practitioners
-to modify, apply, and extend common applications to suit their needs.
-Take dynamic web applications as an example.
-Despite a large number of companies, like Amazon,
-developing successful database-driven web applications in the 1990s,
-the potential of this technology to aid creative entrepreneurs
-has been realized to a far greater degree in the past ten years,
-owing in part to the development of powerful, well-documented frameworks.
+Чтобы любая вычислительная технология достигла своего полного эффекта,
+она должена быть хорошо понятена, хорошо документирована и поддерживаться
+умелыми специалистами с хорошо поддерживаемыми инструментами
+Ключевые идеи должны быть четко сформулированы,
+тем самы сводя к минимуму времени на адаптацию, необходимого для того, чтобы ввести новых практикующих в курс дела.
+Фреймворки и серьёзные библиотеки должны автоматизировать стандартные задачи,
+и примеры кода должны упростить задачу для новичков, чтобы они могли без особого труда
+изменять, применять и расширять распространенные приложения в соответствии с потребностями.
+Возьмем в качестве примера динамические веб-приложения.
+Несмотря на большое количество компаний, таких как Amazon,
+разрабатывающих успешные веб-приложений основывающихся на базах данных в 1990-е годы,
+потенциал этой технологии за последние десять лет был раскрыт большей степени,
+отчасти благодаря разработке мощных, хорошо документированных фреймворков.
 
 
 Testing the potential of deep learning presents unique challenges
@@ -355,28 +354,28 @@ import numpy as np
 import tensorflow as tf
 ```
 
-### Target Audience
+### Целевая аудитория
 
-This book is for students (undergraduate or graduate),
-engineers, and researchers, who seek a solid grasp
-of the practical techniques of deep learning.
-Because we explain every concept from scratch,
-no previous background in deep learning or machine learning is required.
-Fully explaining the methods of deep learning
-requires some mathematics and programming,
-but we will only assume that you come in with some basics,
-including (the very basics of) linear algebra, calculus, probability,
-and Python programming.
-Moreover, in the Appendix, we provide a refresher
-on most of the mathematics covered in this book.
-Most of the time, we will prioritize intuition and ideas
-over mathematical rigor.
-There are many terrific books which can lead the interested reader further.
-For instance, Linear Analysis by Bela Bollobas :cite:`Bollobas.1999`
-covers linear algebra and functional analysis in great depth.
-All of Statistics :cite:`Wasserman.2013` is a terrific guide to statistics.
-And if you have not used Python before,
-you may want to peruse this [Python tutorial](http://learnpython.org/).
+Эта книга для студентов (закончивших или ещё получающих высшее образование),
+инженеров, и исследователей, ищущих хороший ресурс для обучения
+практическим техникам глубокого обучения.
+Именно поэтому мы объсняем каждый пример с нуля,
+никакого опыта в машинном обучении не требуется.
+Полное понимание методов машинного обучения требует определённые знания
+по математике и программированию,
+но мы просто предполагаем, что вы уже обладаете этими навыками,
+включая (самые основы) линейная алгебра, математический анализ, теория веорятности,
+и программирование на языке питон.
+Кроме того, в Приложении мы предлагаем освежить
+большую часть математики, используемой в этой книге.
+Большую часть времени мы будем отдавать предпочтение интуиции и идеям, 
+а не математической строгости.
+Есть много потрясающих книг позволяющих углубиться в интересующую тематику.
+Например, Linear Analysis by Bela Bollobas :cite:`Bollobas.1999`
+охватывает линейную алгебру и функциональный анализ.
+All of Statistics :cite:`Wasserman.2013` это потрясный гайд по статистике.
+И если вы никогда не использовали питон раньше,вы
+можете использовать этот ресурс[Python tutorial]( http://learnpython.org/).
 
 
 ### Форум
