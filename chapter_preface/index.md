@@ -1,7 +1,7 @@
 # Введение
 
 Буквально пару лет назад не было легионов специалистов по глубокому обучению
-разрабатывающих умные продукты и сервисы в больших компаниях и стартапах.
+разрабатывающих интеллектуальные системы и сервисы в больших компаниях и стартапах.
 Когда самый молодый из авторов попал в эту сферу, машинное обучение
 не показывалось в заголовках ежедненых газет.
 Наши родители не имели представление что такое машинное обучение,
@@ -15,30 +15,25 @@
 То на чём мы остановимся в книге считалось устаревшим инструментом
 
 
-В последние 5 лет глубокое обучение застало мир врасплох,
-In just the past five years, deep learning has taken the world by surprise,
-driving rapid progress in fields as diverse as computer vision,
-natural language processing, automatic speech recognition,
-reinforcement learning, and statistical modeling.
-With these advances in hand, we can now build cars that drive themselves
-with more autonomy than ever before (and less autonomy
-than some companies might have you believe),
-smart reply systems that automatically draft the most mundane emails,
-helping people dig out from oppressively large inboxes,
-and software agents that dominate the world's best humans
-at board games like Go, a feat once thought to be decades away.
-Already, these tools exert ever-wider impacts on industry and society,
-changing the way movies are made, diseases are diagnosed,
-and playing a growing role in basic sciences---from astrophysics to biology.
+В последние 5 лет глубокое обучение застало мир врасплох, стремительный прогресс в таких разнообразных 
+областях, как компьютерное зрение, обработка естественного языка, автоматическое распознавание речи, 
+обучение с подкреплением и статистическое моделирование. С этими достижениями в руках теперь мы 
+можем делать машины с автопилотом с таким количеством автоматизации котороый не было никогда.
+(и меньшее количество автоматизации в которое некоторые компании могут заставить вас поверить)
+интеллектуальные системы ответов, которые автоматически составляют самые обыденные электронные письма,
+помогающие людям разгребять угнетающе большие почтовые аккануты,
+и программные агенты которые перегоняют людей в таких сферах как Го, Шахматы. Что считалось невероятным пару
+десятков лет назад. Уже эти инструменты оказывают все большее влияние на производство и общество, меняя то как
+создаются фильмы, и диагнозируются заболевания. Так же тяжело отрицать их растущую роль в фундаментальных науках
+от астрофизики до биологии.
 
 
+## Об этой книге
 
-## About This Book
+Эта книга представляет нашу попытку сделать глубокое обучение доступным,
+обучая вас *концептам*, *контексту* и *программированию*.
 
-This book represents our attempt to make deep learning approachable,
-teaching you the *concepts*, the *context*, and the *code*.
-
-### One Medium Combining Code, Math, and HTML
+### Единое место объединяющее код, математику и Html
 
 For any computing technology to reach its full impact,
 it must be well-understood, well-documented, and supported by
@@ -239,7 +234,7 @@ we show how to pretrain language representation models and apply
 them to natural language processing tasks.
 
 
-### Code
+### Код
 :label:`sec_code`
 
 Most sections of this book feature executable code because of our belief
@@ -384,22 +379,22 @@ And if you have not used Python before,
 you may want to peruse this [Python tutorial](http://learnpython.org/).
 
 
-### Forum
+### Форум
 
-Associated with this book, we have launched a discussion forum,
-located at [discuss.d2l.ai](https://discuss.d2l.ai/).
-When you have questions on any section of the book,
-you can find the associated discussion page link at the end of each chapter.
+В связи с этой книгой мы запустили тематический форум
+[discuss.d2l.ai](https://discuss.d2l.ai/).
+Когда у вас возникнут вопросы по любой части этой книги
+вы сможете найти ссылку на соответсвующую страницу в конце
+каждого эпизда.
 
 
-## Acknowledgments
+## Благодарности
 
-We are indebted to the hundreds of contributors for both
-the English and the Chinese drafts.
-They helped improve the content and offered valuable feedback.
-Specifically, we thank every contributor of this English draft
-for making it better for everyone.
-Their GitHub IDs or names are (in no particular order):
+Мы в долгу перед сотниями вкладчиков для английской и китайской версии.
+Они помогли улучшить контент и предложить ценные замечания.
+В частности, мы благодарим каждого автора английской версии за то что сделали
+её лучше для всех.
+Их GitHub IDs или имена (в случайном порядке):
 alxnorden, avinashingit, bowen0701, brettkoonce, Chaitanya Prakash Bapat,
 cryptonaut, Davide Fiocco, edgarroman, gkutiel, John Mitro, Liang Pu,
 Rahul Agarwal, Mohamed Ali Jamaoui, Michael (Stu) Stewart, Mike Müller,
@@ -430,24 +425,25 @@ steinsag, charleybeller, Andrew Lumsdaine, Jiekui Zhang, Deepak Pathak, Florian 
 Adriaan Tijsseling, Ron Medina, Gaurav Saha, Murat Semerci, Lei Mao, Levi McClenny, Joshua Broyde,
 jake221, jonbally, zyhazwraith, Brian Pulfer, Nick Tomasino.
 
-We thank Amazon Web Services, especially Swami Sivasubramanian,
-Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writing this book. Without the available time, resources, discussions with colleagues, and continuous encouragement this book would not have happened.
+Мы благодарим Amazon Web Services, especially Swami Sivasubramanian,
+Raju Gulabani, Charlie Bell, и Andrew Jassy за их щедрую помощь в написании этой книги. Без времени, ресурсов 
+и постоянного поощрения эта книга не вышла бы
 
 
-## Summary
+## Итог
 
-* Deep learning has revolutionized pattern recognition, introducing technology that now powers a wide range of  technologies, including computer vision, natural language processing, automatic speech recognition.
-* To successfully apply deep learning, you must understand how to cast a problem, the mathematics of modeling, the algorithms for fitting your models to data, and the engineering techniques to implement it all.
-* This book presents a comprehensive resource, including prose, figures, mathematics, and code, all in one place.
-* To answer questions related to this book, visit our forum at https://discuss.d2l.ai/.
-* All notebooks are available for download on GitHub.
+* Глубокое обучение произвело революцию в распознавании образов, внедрив технологию, которая теперь поддерживает широкий спектр областей, включая компьютерное зрение, обработку естественного языка, автоматическое распознавание речи.
+* Чтобы успешно применять глубокое обучение, вы должны понимать, как сформулировать задачу, математику моделей, алгоритмы обучения ваших моделей на данным и технические методы для реализации всего этого.
+* Эта книга представляет собой исчерпывающий ресурс, включающий в себя идеи, иллюстрации, математику и код, все в одном месте
+* Чтобы получить ответы на вопросы можете посетить наш форум https://discuss.d2l.ai/.
+* Все материалы доступны на GitHub.
 
 
-## Exercises
+## Упражнения
 
-1. Register an account on the discussion forum of this book [discuss.d2l.ai](https://discuss.d2l.ai/).
-1. Install Python on your computer.
-1. Follow the links at the bottom of the section to the forum, where you will be able to seek out help and discuss the book and find answers to your questions by engaging the authors and broader community.
+1. Зарегистрируйте аккаунт на сайте дискуссий этой книги [discuss.d2l.ai](https://discuss.d2l.ai/).
+1. Установите питон на ваш компьютер.
+1. Проследйте по ссылкам ниже на форум, где вы сможете найти помощь и обсудить книгу, и найти ответы на ваши вопросы вовлекая широкое сообщество и авторов.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/18)
