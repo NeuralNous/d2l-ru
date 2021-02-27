@@ -50,26 +50,25 @@
 отчасти благодаря разработке мощных, хорошо документированных фреймворков.
 
 
-Testing the potential of deep learning presents unique challenges
-because any single application brings together various disciplines.
-Applying deep learning requires simultaneously understanding
-(i) the motivations for casting a problem in a particular way;
-(ii) the mathematics of a given modeling approach;
-(iii) the optimization algorithms for fitting the models to data;
-and (iv) the engineering required to train models efficiently,
-navigating the pitfalls of numerical computing
-and getting the most out of available hardware.
-Teaching both the critical thinking skills required to formulate problems,
-the mathematics to solve them, and the software tools to implement those
-solutions all in one place presents formidable challenges.
-Our goal in this book is to present a unified resource
-to bring would-be practitioners up to speed.
+Приложение потенциала глубокого обучения представляет собой уникальное
+испытание, ибо любое приложение соединяет различные дисциплны.
+Приложение глубокого обучения требует одновременного понимания
+(i) постановку задачи определённым образом;
+(ii) математическую основу конкретного подхода;
+(iii) оптимизационные алгоритмы для обучения модели;
+и (iv) технические навыки для эффективного обучения,
+понимание численных методов и полчение максимума из доступного железа.
+Навыки критического мышления, необходимы для формулирования проблем,
+математика для их решения, программные инструменты для реализации этих
+решений. Воссоединение всего этого представляет собой серьёзное испытание.
+Цель этой книги представить общий ресурс для того чтобы ввести будущих практиков
+в курс дела.
 
-At the time we started this book project,
-there were no resources that simultaneously
-(i) were up to date; (ii) covered the full breadth
-of modern machine learning with substantial technical depth;
-and (iii) interleaved exposition of the quality one expects
+В то время когда мы начинали этот проект не было ресурсов
+которые бы:
+(i) являлись актуальными; (ii) охватывали весь спектр
+современного машинного обучения с достаточной технической глубиной;
+и (iii) interleaved exposition of the quality one expects
 from an engaging textbook with the clean runnable code
 that one expects to find in hands-on tutorials.
 We found plenty of code examples for
@@ -95,37 +94,37 @@ sometimes leaving readers clueless as to how to implement them.
 Moreover, too many resources are hidden behind the paywalls
 of commercial course providers.
 
-We set out to create a resource that could
-(i) be freely available for everyone;
-(ii) offer sufficient technical depth to provide a starting point on the path
-to actually becoming an applied machine learning scientist;
-(iii) include runnable code, showing readers *how* to solve problems in practice;
-(iv) allow for rapid updates, both by us
-and also by the community at large;
-and (v) be complemented by a [forum](http://discuss.d2l.ai)
-for interactive discussion of technical details and to answer questions.
+Мы задались целью создать ресурс, который мог бы
+(i) быть свободно доступным для всех;
+(ii) предложить достаточную техническую глубину, чтобы обеспечить отправную точку на пути к тому,
+чтобы действительно стать прикладным специалистом по машинному обучению;
+(iii) включать запускаемый код, показывающий читателям способы решать проблемы на практике;
+(iv) быть доступным для быстрого изменения как нами так и сообществом в целом.
+и (v) дополнятся [форумом](http://discuss.d2l.ai)
+для обсуждения технических деталей и ответов на вопросы.
 
-These goals were often in conflict.
-Equations, theorems, and citations are best managed and laid out in LaTeX.
-Code is best described in Python.
-And webpages are native in HTML and JavaScript.
-Furthermore, we want the content to be
-accessible both as executable code, as a physical book,
-as a downloadable PDF, and on the Internet as a website.
-At present there exist no tools and no workflow
-perfectly suited to these demands, so we had to assemble our own.
-We describe our approach in detail in :numref:`sec_how_to_contribute`.
-We settled on GitHub to share the source and to allow for edits,
-Jupyter notebooks for mixing code, equations and text,
-Sphinx as a rendering engine to generate multiple outputs,
-and Discourse for the forum.
-While our system is not yet perfect,
-these choices provide a good compromise among the competing concerns.
-We believe that this might be the first book published
-using such an integrated workflow.
+Эти цели часто противоречили друг другу.
+Уравнения, теоремы и цитаты лучше всего оформлялись при помощи LaTeX.
+Код лучше всего описывался питоном.
+А сайт на чистом HTML и JavaScript.
+Кроме того, мы хотим, чтобы контент был
+доступен как в виде исполняемого кода, так и в виде физической книги
+как загружаемый пдф файл и доступный веб версия.
+В настоящее время не существует инструментов идеально подходящих 
+для этих требований, поэтому нам пришлось создать свои собственные.
+Мы подробно описываем наш подход в :numref:`sec_how_to_contribute`.
+Мы создали проект на GitHub, чтобы поделиться исходным кодом и разрешить правки,
+Jupyter файлы для смешывания кода, уравнений и текста,
+Sphinx как движок рендеринга для генерации.
+и Discourse для форума.
+Пока наша система не идеально,
+эти решения являются хорошим компромисом между конкурирующими проблемами.
+Мы считаем, что это может быть первая книга, опубликованная с использованием такого
+рабочего процесса.
 
 
-### Learning by Doing
+
+### Обучение на практике
 
 Many textbooks teach a series of topics, each in exhaustive detail.
 For example, Chris Bishop's excellent textbook :cite:`Bishop.2006`,
@@ -283,49 +282,51 @@ d2l = sys.modules[__name__]
 ```
 
 :begin_tab:`mxnet`
-Most of the code in this book is based on Apache MXNet.
-MXNet is an open-source framework for deep learning
-and the preferred choice of AWS (Amazon Web Services),
-as well as many colleges and companies.
-All of the code in this book has passed tests under the newest MXNet version.
-However, due to the rapid development of deep learning, some code
-*in the print edition* may not work properly in future versions of MXNet.
-However, we plan to keep the online version up-to-date.
-In case you encounter any such problems,
-please consult :ref:`chap_installation`
-to update your code and runtime environment.
+Большая часть кода в этой версии написана на Apache MXNet.
+MXNet это открытый фреймворк для глубокого обучения
+этот фреймворк используется в AWS (Amazon Web Services),
+и также большим количеством компаний и сотрудников.
+Весь этот код проходит тесты на последней версии MXNet.
+Но из-за скоростного развития глубокого обучения и фреймворков в частности
+*код в печатной версии* может работать не совсем корректно в последних версиях MXNet.
+Но мы всё равно планируем держать веб версию в актуальном состоянии.
+В случае если вы встретите какую-то проблему,
+пожалуйста донесите :ref:`chap_installation`
+чтобы обновить код и виртуальное окружение.
 
-Here is how we import modules from MXNet.
+Вот как мы импортируем модули для MXNet.
 :end_tab:
 
 :begin_tab:`pytorch`
-Most of the code in this book is based on PyTorch.
-PyTorch is an open-source framework for deep learning, which is extremely
-popular in the research community.
-All of the code in this book has passed tests under the newest PyTorch.
-However, due to the rapid development of deep learning, some code
-*in the print edition* may not work properly in future versions of PyTorch.
-However, we plan to keep the online version up-to-date.
-In case you encounter any such problems,
-please consult :ref:`chap_installation`
-to update your code and runtime environment.
+Большая часть кода в этой версии написана на pytorch.
+MXNet это открытый фреймворк для глубокого обучения
+этот фреймворк безумно популярен среди исследователей,
+и также используется большим количеством компаний и сотрудников.
+Весь этот код проходит тесты на последней версии pytorch.
+Но из-за скоростного развития глубокого обучения и фреймворков в частности
+*код в печатной версии* может работать не совсем корректно в последних версиях pytorch.
+Но мы всё равно планируем держать веб версию в актуальном состоянии.
+В случае если вы встретите какую-то проблему,
+пожалуйста донесите :ref:`chap_installation`
+чтобы обновить код и виртуальное окружение.
 
-Here is how we import modules from PyTorch.
+Вот как мы импортируем модули для pytorch.
 :end_tab:
 
 :begin_tab:`tensorflow`
-Most of the code in this book is based on TensorFlow.
-TensorFlow is an open-source framework for deep learning, which is extremely
-popular in both the research community and industry.
-All of the code in this book has passed tests under the newest TensorFlow.
-However, due to the rapid development of deep learning, some code
-*in the print edition* may not work properly in future versions of TensorFlow.
-However, we plan to keep the online version up-to-date.
-In case you encounter any such problems,
-please consult :ref:`chap_installation`
-to update your code and runtime environment.
+Большая часть кода в этой версии написана на tensorflow.
+MXNet это открытый фреймворк для глубокого обучения
+этот фреймворк безумно популярен среди исследователей и бизнеса,
+и также используется большим количеством компаний и сотрудников.
+Весь этот код проходит тесты на последней версии tensorflow.
+Но из-за скоростного развития глубокого обучения и фреймворков в частности
+*код в печатной версии* может работать не совсем корректно в последних версиях tensorflow.
+Но мы всё равно планируем держать веб версию в актуальном состоянии.
+В случае если вы встретите какую-то проблему,
+пожалуйста донесите :ref:`chap_installation`
+чтобы обновить код и виртуальное окружение.
 
-Here is how we import modules from TensorFlow.
+Вот как мы импортируем модули для tensorflow.
 :end_tab:
 
 ```{.python .input}
