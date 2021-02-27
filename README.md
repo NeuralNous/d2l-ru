@@ -6,7 +6,7 @@
 
 [![Build Status](http://ci.d2l.ai/job/d2l-en/job/master/badge/icon)](http://ci.d2l.ai/job/d2l-en/job/master/)
 
-[Book website](https://d2l.ai/) | [STAT 157 Course at UC Berkeley, Spring 2019](http://courses.d2l.ai/berkeley-stat-157/index.html) | Последняя версия: v0.16.1
+[Сайт книги](https://d2l.ai/) | [STAT 157 Course at UC Berkeley, Spring 2019](http://courses.d2l.ai/berkeley-stat-157/index.html) | Последняя версия: v0.16.1
 
 <h5 align="center"><i>Лучиший способ понять глубокое обучение это практика</i></h5>
 
