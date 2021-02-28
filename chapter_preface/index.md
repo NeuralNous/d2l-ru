@@ -68,31 +68,30 @@
 которые бы:
 (i) являлись актуальными; (ii) охватывали весь спектр
 современного машинного обучения с достаточной технической глубиной;
-и (iii) interleaved exposition of the quality one expects
-from an engaging textbook with the clean runnable code
-that one expects to find in hands-on tutorials.
-We found plenty of code examples for
-how to use a given deep learning framework
-(e.g., how to do basic numerical computing with matrices in TensorFlow)
-or for implementing particular techniques
-(e.g., code snippets for LeNet, AlexNet, ResNets, etc)
-scattered across various blog posts and GitHub repositories.
-However, these examples typically focused on
-*how* to implement a given approach,
-but left out the discussion of *why* certain algorithmic decisions are made.
-While some interactive resources have popped up sporadically
-to address a particular topic, e.g., the engaging blog posts
-published on the website [Distill](http://distill.pub), or personal blogs,
-they only covered selected topics in deep learning,
-and often lacked associated code.
-On the other hand, while several textbooks have emerged,
-most notably :cite:`Goodfellow.Bengio.Courville.2016`,
-which offers a comprehensive survey of the concepts behind deep learning,
-these resources do not marry the descriptions
-to realizations of the concepts in code,
-sometimes leaving readers clueless as to how to implement them.
-Moreover, too many resources are hidden behind the paywalls
-of commercial course providers.
+и (iii) чередовала бы теорию с практическими реализациями.
+Мы нашли множество примеров кода на тех или иных
+фреймворках глубокого обучения
+(например, как сделать базовые вычисления с матрицами в TensorFlow)
+или для реализации конкретных методов
+(например, фрагменты кода для LeNet, AlexNet, ResNets и т. Д)
+разбросанные по различным постам в блогах и репозиториям GitHub.
+Однако эти примеры обычно основаны на том как реализовать
+тот или иной механизм, но они не иллюстрируют то зачем определённые
+алгоритмические решения были сделаны.
+В то время как некоторые интерактивные ресурсы появлялись от случая к случаю, 
+чтобы описать к определенную тему, например, привлекательные сообщения в блогах, 
+опубликованным на веб-сайте Distill, или личные блоги, охватывают только отдельные темы в глубоком обучении
+и часто не имели связи друг с другом.
+опубликовано на вебсайте [Distill](http://distill.pub), или личных блогах,
+они касались только отдельных тем в глубоком обучении,
+и часто не имело программных реализаций.
+С другой стороны, появилось несколько учебников,
+самый заметний из которых :cite:`Goodfellow.Bengio.Courville.2016`,
+который предлагает всесторонний обзор концепций, лежащих в основе глубокого обучения,
+эти ресурсы не имеют подходящего описания
+для реализации материала в коде,
+иногда оставляя читателей в неведении относительно того, как их реализовать.
+Более того крайне большое количество ресурсов имеют продавцы курсов.
 
 Мы задались целью создать ресурс, который мог бы
 (i) быть свободно доступным для всех;
@@ -126,138 +125,123 @@ Sphinx как движок рендеринга для генерации.
 
 ### Обучение на практике
 
-Many textbooks teach a series of topics, each in exhaustive detail.
-For example, Chris Bishop's excellent textbook :cite:`Bishop.2006`,
-teaches each topic so thoroughly, that getting to the chapter
-on linear regression requires a non-trivial amount of work.
-While experts love this book precisely for its thoroughness,
-for beginners, this property limits its usefulness as an introductory text.
+Многие учебники преподают ряд тем, каждая из которых исчерпывающе детализирована.
+Например, отличный учебник Криса Бишопа :cite:`Bishop.2006`,
+обучает каждой теме настолько тщательно, что для того чтобы добраться до главы
+с линейной регрессией требуется немалое количестов работы.
+Пока эксперты любят эту книгу за её доскональность, для новичков
+это свойство ограничивает возможности этой книги как вводный материал.
 
-In this book, we will teach most concepts *just in time*.
-In other words, you will learn concepts at the very moment
-that they are needed to accomplish some practical end.
-While we take some time at the outset to teach
-fundamental preliminaries, like linear algebra and probability,
-we want you to taste the satisfaction of training your first model
-before worrying about more esoteric probability distributions.
+В этой книге мы будем изучать большинство концептов прямо тогда
+когда они понадобятся для практических целей.
+В то же время для самого начала в любом случае придётся уяснить некоторые
+базовые понятия такие как: Линейная алгебра и теория вероятности.
+Мы хотим чтобы вы почувствовали вкус удовольствия от обучения вашей первой
+модели прежде чем беспокоиться о более сложных распределениях вероятностей.
 
-Aside from a few preliminary notebooks that provide a crash course
-in the basic mathematical background,
-each subsequent chapter introduces both a reasonable number of new concepts
-and provides single self-contained working examples---using real datasets.
-This presents an organizational challenge.
-Some models might logically be grouped together in a single notebook.
-And some ideas might be best taught by executing several models in succession.
-On the other hand, there is a big advantage to adhering
-to a policy of *one working example, one notebook*:
-This makes it as easy as possible for you to
-start your own research projects by leveraging our code.
-Just copy a notebook and start modifying it.
+Помимо нескольких предварительных частей, которые обеспечивают ускоренный курс
+в основную математическую базу каждая последующая глава вводит
+как разумное количество новых концепций, так и предоставляет отдельные 
+практические примеры с использованием реальных наборов данных.
+Некоторые модели можно логически сгруппировать в одной части.
+А некоторые идеи лучше всего показывать подряд.
+С другой стороны, есть большое преимущество в том, чтобы придерживаться
+политики *один рабочий пример, одна записная книжка*:
+Это позволяет вам максимально легко начать свои собственные исследовательские проекты, используя наш код.
+Просто скопируйте код и начните его изменять.
 
-We will interleave the runnable code with background material as needed.
-In general, we will often err on the side of making tools
-available before explaining them fully (and we will follow up by
-explaining the background later).
-For instance, we might use *stochastic gradient descent*
-before fully explaining why it is useful or why it works.
-This helps to give practitioners the necessary
-ammunition to solve problems quickly,
-at the expense of requiring the reader
-to trust us with some curatorial decisions.
+Мы будем чередовать код с текстовым материалом по мере необходимости.
+В общем, мы часто ошибаемся, используя инструменты, 
+прежде чем объяснить их полностью.
+Например, мы могли бы использовать *стохастический градиентный спуск*
+, прежде чем полностью объяснить, почему он полезен или почему он работает.
+Это помогает дать практикующим необходимую
+амуницию для быстрого решения проблем,
+за счет того, что читатель может положится на нас в использовании решений.
 
-This book will teach deep learning concepts from scratch.
-Sometimes, we want to delve into fine details about the models
-that would typically be hidden from the user
-by deep learning frameworks' advanced abstractions.
-This comes up especially in the basic tutorials,
-where we want you to understand everything
-that happens in a given layer or optimizer.
-In these cases, we will often present two versions of the example:
-one where we implement everything from scratch,
-relying only on the NumPy interface and automatic differentiation,
-and another, more practical example,
-where we write succinct code using high-level APIs of deep learning frameworks.
-Once we have taught you how some component works,
-we can just use the high-level APIs in subsequent tutorials.
+Эта книга обучит концепциям глубокого обучения с нулля.
+Иногда мы хотим углубится в в детали скрытые от пользователя
+высокоуровневыми абстракциями реализованными в фреймворке.
+Это особенно актуально в базовых частях книги,
+где мы хотим, чтобы вы все поняли
+что именно происходит в данном слое или оптимизаторе.
+В этих случаях мы представялем две версии: одна написанная с нуля, 
+а вторая с использованием высокоуровневого апи фреймворка.
+После того, как мы объяснили вам, как работает какой-либо компонент, 
+далее мы можем просто использовать высокоуровневые API.
 
 
-### Content and Structure
+### Контент и структура
 
-The book can be roughly divided into three parts,
-which are presented by different colors in :numref:`fig_book_org`:
+Книга может быть грубо разделена на три части,
+которые представлены различными цветами в :numref:`fig_book_org`:
 
-![Book structure](../img/book-org.svg)
+![Структура книги](../img/book-org.svg)
 :label:`fig_book_org`
 
 
-* The first part covers basics and preliminaries.
-:numref:`chap_introduction` offers an introduction to deep learning.
-Then, in :numref:`chap_preliminaries`,
-we quickly bring you up to speed on the prerequisites required
-for hands-on deep learning, such as how to store and manipulate data,
-and how to apply various numerical operations based on basic concepts
-from linear algebra, calculus, and probability.
-:numref:`chap_linear` and :numref:`chap_perceptrons`
-cover the most basic concepts and techniques of deep learning,
-such as linear regression, multilayer perceptrons and regularization.
+* Первая часть покрывать основы и необходимую для понимания 
+информацию.:numref:`chap_introduction` 
+предлагает введение в глубокое обучение.
+Затем в :numref:`chap_preliminaries`,
+мы быстро расскажем о необходимой информации для практики глубокого
+обучения. Например о том как хранить и управлять данными и как
+прилагать различные операции основываюсь на концепициях из
+линейной алгебры, математического анализи и теории вероятности.
+:numref:`chap_linear` и :numref:`chap_perceptrons`
+покрывает самые основные техники и идеи из машинного обучения,
+такие как линейная регрессия, многослойный перцептрон и регуляризация.
 
-* The next five chapters focus on modern deep learning techniques.
-:numref:`chap_computation` describes the various key components of deep
-learning calculations and lays the groundwork
-for us to subsequently implement more complex models.
-Next, in :numref:`chap_cnn` and :numref:`chap_modern_cnn`,
-we introduce convolutional neural networks (CNNs), powerful tools
-that form the backbone of most modern computer vision systems.
-Subsequently, in :numref:`chap_rnn` and :numref:`chap_modern_rnn`, we introduce
-recurrent neural networks (RNNs), models that exploit
-temporal or sequential structure in data, and are commonly used
-for natural language processing and time series prediction.
-In :numref:`chap_attention`, we introduce a new class of models
-that employ a technique called attention mechanisms
-and they have recently begun to displace RNNs in natural language processing.
-These sections will get you up to speed on the basic tools
-behind most modern applications of deep learning.
+* Следующие пять глав рассказывают о современных идеях в машинном обучении.
+:numref:`chap_computation` описывает различные ключевые вещи в глубоком обучении
+обучение расчётам и основы позволят нам в будущем 
+реализовывать более сложные модели.
+Далее в :numref:`chap_cnn` и :numref:`chap_modern_cnn`,
+мы приступим к свёрточным нейронным сетям (CNNs), мощным инструментам
+которые формируют хребет современных систем компьютерного зрения.
+Потом в:numref:`chap_rnn` и :numref:`chap_modern_rnn`, 
+мы доходим до рекурентных нейронных сетей(RNNs), модели, использующие
+временную или последовательную структуру данных, и зачастую используемые в 
+прогнозировании временных рядов и работе в обработке языка.
+В :numref:`chap_attention`, мы демонстрируем новый класс моделей
+которые полагаются на технику называемую механизмом внимания,
+они только недавно начали замещать рекурентные нейронные сети в обработке языка.
+Эти разделы помогут вам быстро освоить основные инструменты, 
+лежащие в основе большинства современных приложений глубокого обучения.
 
-* Part three discusses scalability, efficiency, and applications.
-First, in :numref:`chap_optimization`,
-we discuss several common optimization algorithms
-used to train deep learning models.
-The next chapter, :numref:`chap_performance` examines several key factors
-that influence the computational performance of your deep learning code.
-In :numref:`chap_cv`,
-we illustrate
-major applications of deep learning in computer vision.
-In :numref:`chap_nlp_pretrain` and :numref:`chap_nlp_app`,
-we show how to pretrain language representation models and apply
-them to natural language processing tasks.
+
+* В части три берётся во внимание масштабирование, эффективность, и приложения.
+Во Первых, в :numref:`chap_optimization`,
+мы обсуждаем различные оптимизационные алгоритмы позволяющие обучать модели.
+В следующей части, :numref:`chap_performance` исследуется несколько ключевых факторов
+, влияющих на производительность вашего кода.
+В :numref:`chap_cv`,
+проиллюстрируем основные области применения
+глубокого обучения в компьютерном зрении.
+В :numref:`chap_nlp_pretrain` и :numref:`chap_nlp_app`,
+мы покажем, как предварительно обучить языковые модели представления и применить
+их к задачам обработки естественного языка.
 
 
 ### Код
 :label:`sec_code`
 
-Most sections of this book feature executable code because of our belief
-in the importance of an interactive learning experience in deep learning.
-At present, certain intuitions can only be developed through trial and error,
-tweaking the code in small ways and observing the results.
-Ideally, an elegant mathematical theory might tell us
-precisely how to tweak our code to achieve a desired result.
-Unfortunately, at present, such elegant theories elude us.
-Despite our best attempts, formal explanations for various techniques
-are still lacking, both because the mathematics to characterize these models
-can be so difficult and also because serious inquiry on these topics
-has only just recently kicked into high gear.
-We are hopeful that as the theory of deep learning progresses,
-future editions of this book will be able to provide insights
-in places the present edition cannot.
-
-At times, to avoid unnecessary repetition, we encapsulate
-the frequently-imported and referred-to functions, classes, etc.
-in this book in the `d2l` package.
-For any block such as a function, a class, or multiple imports
-to be saved in the package, we will mark it with
-`#@save`. We offer a detailed overview of these functions and classes in :numref:`sec_d2l`.
-The `d2l` package is light-weight and only requires
-the following packages and modules as dependencies:
+Большинство секций этой книги представляют запускаемый код из-за нашей веры
+в важность получения практических навыков в глубоком обучении.
+В настоящее время часть понятий может быть усвоена только путем проб и ошибок.
+Немного изменяя код и наблюдая за результатами. В лучшем случае элегантная математическая теория
+может сказать нам точно как нужно изменить код для получения желамых результатов.
+К сожалению, в настоящее время такие изящные теории ускользают от нас.
+Несмотря на наши лучшие попытки, формальные объяснения некоторых техник ещё отсутсвую
+по причине сложнейшей математической базы лежащей за этими моделями, а так же 
+по причине их новизны. Мы надеемся что по ходу развития глубокого обучения
+будущие издания этой книги будут способны предложить объяснения там, где 
+сейчас их нет.
+Временами во избежание излешнего повторения мы создаем часто
+используемые классы, функции и тд в d2l пакет.
+Любой объект который будет сохранен в наш пакет будет отмечен соответсвующим образом
+`#@save`. Мы предлагаем подробный обзор этих функций и классов в :numref:`sec_d2l`.
+`d2l` пакет легковесный и требует только следующие зависимости:
 
 ```{.python .input}
 #@tab all
