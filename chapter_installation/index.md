@@ -1,4 +1,4 @@
-# Installation
+# Установки
 :label:`chap_installation`
 
 In order to get you up and running for hands-on learning experience,
