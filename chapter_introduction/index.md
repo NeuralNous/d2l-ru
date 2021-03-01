@@ -1,38 +1,33 @@
 # Введение
 :label:`chap_introduction`
 
-Until recently, nearly every computer program that we interact with daily
-was coded by software developers from first principles.
-Say that we wanted to write an application to manage an e-commerce platform.
-After huddling around a whiteboard for a few hours to ponder the problem,
-we would come up with the broad strokes of a working solution that might probably look something like this:
-(i) users interact with the application through an interface
-running in a web browser or mobile application;
-(ii) our application interacts with a commercial-grade database engine
-to keep track of each user's state and maintain records
-of historical transactions; 
-and (iii) at the heart of our application,
-the *business logic* (you might say, the *brains*) of our application
-spells out in methodical detail the appropriate action
-that our program should take in every conceivable circumstance.
+До недавних пор практически каждая компьютерная программа с которой мы взаимодействовали
+ежедневно была написана разработчиком на основании следующих принципов.
+Скажем мы хотим написать приложение для управления интернет магазином.
+После обдумывания проблемы около доски мы приходим к наброскам рабочего решения
+которое выглядело бы примерно так:
+(i) пользователи взаимодействуют с приложеним через интерфейс в браузере или
+мобильном приложении.
+(ii) наше приложение взаимодействует с коммерческой базой данных для отслеживания 
+состояния пользователей и записывать историю транзакций
+и (iii) в основе нашего приложение *бизнес-логика* (можно сказать *мозги*) нашего 
+приложения которая должна обрабатывать все необходимые действия.
 
-To build the brains of our application,
-we would have to step through every possible corner case
-that we anticipate encountering, devising appropriate rules.
-Each time a customer clicks to add an item to their shopping cart,
-we add an entry to the shopping cart database table,
-associating that user's ID with the requested product's ID.
-While few developers ever get it completely right the first time
-(it might take some test runs to work out the kinks),
-for the most part, we could write such a program from first principles
-and confidently launch it 
-*before* ever seeing a real customer.
-Our ability to design automated systems from first principles
-that drive functioning products and systems, 
-often in novel situations,
-is a remarkable cognitive feat.
-And when you are able to devise solutions that work $100\%$ of the time,
-you should not be using machine learning.
+Чтобы построить бизнес логику нашего приложения мы должны были бы
+просмотреть все возможные исключительные случаи с которыми мы можем столкнуться,
+разработать соответсвующие правила.
+Каждый раз когда покупатель добавляет товар в свою корзину
+мы должны сделать запись в базу данных, сопоставляя id покупателя
+с id заказанного товара.
+Хотя немногие разработчики делают это правильно с перового раза
+(обычно требуется несколько тестовых запусков чтобы разобраться с багами),
+для большей части мы могли бы написаить такую программу по этим принципам
+и спокойно запустить её *прежде* чем увидим реального клиента.
+Наша способность создавать автоматизированные системы исходя из этих принципов
+которая привела к функционированию программных продуктов в часто новых ситуациях
+является заметным интеллектуальным шагом.
+И когда вы способны создать решение работающее $100\%$ времени вам требуется
+машинное обучение
 
 Fortunately for the growing community of machine learning scientists,
 many tasks that we would like to automate
