@@ -29,81 +29,78 @@
 И когда вы способны создать решение работающее $100\%$ времени вам требуется
 машинное обучение
 
-Fortunately for the growing community of machine learning scientists,
-many tasks that we would like to automate
-do not bend so easily to human ingenuity.
-Imagine huddling around the whiteboard with the smartest minds you know,
-but this time you are tackling one of the following problems:
+К счастью для растущего сообщества специалистов по машинному обучению, 
+есть множество задач которые мы хотели бы автоматизировать и которые
+не подвластны человеческому пониманию.
+Представьте себе попытку решить задачу вместе с самыми умнейшими людьми
+которых вы знаете в то время как вы решаете одну из этих задач:
 
-* Write a program that predicts tomorrow's weather given geographic information, satellite images, and a trailing window of past weather.
-* Write a program that takes in a question, expressed in free-form text, and  answers it correctly.
-* Write a program that given an image can identify all the people it contains,  drawing outlines around each.
-* Write a program that presents users with products that they are likely to   enjoy but unlikely, in the natural course of browsing, to encounter.
+* Напишите программу которая предсказывает погоду на завтра по выданной географической информации, фото со спутников и данным о прошлой погоде.
+* Напишите программу которая получает вопрос в свободной форме и отвечает на него правильно
+* Напишите прогамму которая по данной фотографии идентифицрует всех людей на ней и рисует границы для каждой.
+* Напишите программу которая представляет пользователей с продукцией которуя скорее всего и понравится, но которую они бы не нашли сами.
 
-In each of these cases, even elite programmers
-are incapable of coding up solutions from scratch.
-The reasons for this can vary. Sometimes the program
-that we are looking for follows a pattern that changes over time,
-and we need our programs to adapt.
-In other cases, the relationship (say between pixels,
-and abstract categories) may be too complicated,
-requiring thousands or millions of computations
-that are beyond our conscious understanding
-even if our eyes manage the task effortlessly.
-*Machine learning* is the study of powerful
-techniques that can learn from experience.
-As an machine learning algorithm accumulates more experience,
-typically in the form of observational data or
-interactions with an environment, its performance improves.
-Contrast this with our deterministic e-commerce platform,
-which performs according to the same business logic,
-no matter how much experience accrues,
-until the developers themselves learn and decide
-that it is time to update the software.
-In this book, we will teach you the fundamentals of machine learning,
-and focus in particular on *deep learning*, 
-a powerful set of techniques
-driving innovations in areas as diverse as computer vision,
-natural language processing, healthcare, and genomics.
+Во всех из этих случаев даже элитный программисты 
+неспособны закодить это решение с нуля.
+Причин на это великое множество. Иногда программа
+которая ищет шаблоны которые могут менятся со временем 
+и нужно чтобы наша программа адаптировалась.
+В других случаях отношения (скажем между пикселями и абстрактными
+категориями) может быть слишком сложны. Они могут потребовать
+тысячи или миллионы вычислений, что за пределами
+человеческого сознания, даже если наши глаза 
+хорошо справляются с задачей.
+*Машинное обучения* есть учение о мощных техниках
+которые обучаеются на собственном опыте.
+По скоплению опыта алгоритмы машинного обучения как правило, в виде 
+данных из наблюдений или взаимодействий с окружающей 
+средой его производительность улучшается.
+Сравните это с нашей платформой электронной коммерции,
+которая работает в соответствии с той же бизнес-логикой,
+независимо от того, сколько опыта накапливается,
+пока сами разработчики не решат что
+пришло время обновить программное обеспечение.
+В этой книге мы научим вас основам машинного обучения и сфокусируемся
+на глубоком обучении и наборе техник стимулирующих иновации таких областях
+как компьютерное зрение, обработка языка, медицина и генетика.
 
-## A Motivating Example
+## Мотивирующий пример
 
-Before beginning writing, the authors of this book,
-like much of the work force, had to become caffeinated.
-We hopped in the car and started driving.
-Using an iPhone, Alex called out "Hey Siri",
-awakening the phone's voice recognition system.
-Then Mu commanded "directions to Blue Bottle coffee shop".
-The phone quickly displayed the transcription of his command.
-It also recognized that we were asking for directions
-and launched the Maps application (app)
-to fulfill our request.
-Once launched, the Maps app identified a number of routes.
-Next to each route, the phone displayed a predicted transit time.
-While we fabricated this story for pedagogical convenience,
-it demonstrates that in the span of just a few seconds,
-our everyday interactions with a smart phone
-can engage several machine learning models.
+Прежде чем начинать написание книги авторы этой книги 
+как и большшая часть рабочей силы нуждаются в кофе.
+Мы сели в машину и поехали.
+На айфоне Алекс вызвал сири пробуждая систему
+распознавания голоса в телефоне.
+Затем Му скомандовал дорога до Blue Bottle coffee shop.
+Затем телефон быстро показал транскрипция его комманды.
+Он также распознал то как мы уточняли дорогу и запустил
+карты чтобы закончить нас запрос.
+Однажд запустившись карты идентифицировали количество маршрутов.
+Затем для каждого маршрута было предсказано время поездки.
+Пока мы рассказали эту история из педагогических побуждений, 
+он демонстрирует в разрезе пары секунд то как наши ежедневный взаимодействия с телефоном
+могут обращаться к нескольким моделям машинного обучения.
 
 
-Imagine just writing a program to respond to a *wake word*
-such as "Alexa", "OK Google", and "Hey Siri".
-Try coding it up in a room by yourself
-with nothing but a computer and a code editor,
-as illustrated in :numref:`fig_wake_word`.
-How would you write such a program from first principles?
-Think about it... the problem is hard.
-Every second, the microphone will collect roughly 
-44000 samples.
-Each sample is a measurement of the amplitude of the sound wave.
-What rule could map reliably from a snippet of raw audio to confident predictions 
+Представьте себе попытку написать программу которая будет
+отвечать на пробуждающее слово.
+Такое как Алекса, Ок Гугл, Привет Алиса и Сири.
+Попробуй написать это сам используя только компьютер и IDE,
+как показано в :numref:`fig_wake_word`.
+Как бы вы написали такую программу использую первоначальные прицнипы?
+Подумайте об этом... Проблема не из простых.
+Каждую секунду микрофон собирает примерно 44000 записей.
+Каждая запись это просто измерение амплитуды звуковой волны.
+Какое правило привяжет фрагмент необработанного аудио в уверенный прогноз
 $\{\text{yes}, \text{no}\}$
-on whether the snippet contains the wake word?
-If you are stuck, do not worry.
+исходя из того есть ли пробуждающее слово в этом примере?
+Если у вас не получается, то не беспокойтесь.
+Мы не знаем как написать такую программу с нуля как и вы.
+Вот зачем мы используем машинное обучени.
 We do not know how to write such a program from scratch either.
 That is why we use machine learning.
 
-![Identify a wake word.](../img/wake-word.svg)
+![Определение пробуждающего слова.](../img/wake-word.svg)
 :label:`fig_wake_word`
 
 
@@ -200,7 +197,7 @@ which we will explain in greater detail later,
 is just one among many popular methods
 for solving machine learning problems.
 
-## Key Components
+## Ключевые компоненты
 
 In our wake word example, we described a dataset
 consisting of audio snippets and binary labels, 
@@ -223,7 +220,7 @@ that will follow us around, no matter what kind of machine learning problem we t
 1. An *objective function* that quantifies how well (or badly) the model is doing.
 1. An *algorithm* to adjust the model's parameters to optimize the objective function.
 
-### Data
+### Данные
 
 It might go without saying that you cannot do data science without data.
 We could lose hundreds of pages pondering what precisely constitutes data,
@@ -317,7 +314,7 @@ Note that this can all happen without the data scientist
 actively conspiring, or even being aware.
 
 
-### Models
+### Модели
 
 Most machine learning involves transforming the data in some sense.
 We might want to build a system that ingests photos and predicts smiley-ness.
@@ -340,7 +337,7 @@ that are chained together top to bottom, thus the name *deep learning*.
 On our way to discussing deep models,
 we will also discuss some more traditional methods.
 
-### Objective Functions
+### Функции потерь
 
 Earlier, we introduced machine learning as learning from experience.
 By *learning* here,
@@ -402,7 +399,7 @@ In real-life terms, this is like flunking the real exam
 despite doing well on practice exams.
 
 
-### Optimization Algorithms
+### Оптимизационные алгоритмы
 
 Once we have got some data source and representation,
 a model, and a well-defined objective function,
@@ -417,7 +414,7 @@ if you perturbed that parameter just a small amount.
 It then updates
 the parameter in the direction that may reduce the loss.
 
-## Kinds of Machine Learning Problems
+## Виды проблем решаемых машинным обучением
 
 The wake word problem in our motivating example
 is just one among
@@ -430,7 +427,7 @@ We will constantly refer to
 our aforementioned concepts 
 such as data, models, and training techniques.
 
-### Supervised Learning
+### Обучение с учителем
 
 Supervised learning addresses the task of
 predicting labels given input features.
@@ -498,7 +495,7 @@ The full process is drawn in :numref:`fig_supervised_learning`.
 ![Supervised learning.](../img/supervised-learning.svg)
 :label:`fig_supervised_learning`
 
-#### Regression
+#### Регрессия
 
 Perhaps the simplest supervised learning task
 to wrap your head around is *regression*.
@@ -578,7 +575,7 @@ minimizing the squared error loss function.
 As we will see later, this loss corresponds to the assumption
 that our data were corrupted by Gaussian noise.
 
-#### Classification
+#### Классификация
 
 While regression models are great for addressing *how many?* questions,
 lots of problems do not bend comfortably to this template.
@@ -693,7 +690,7 @@ For example, rattle snakes and garter snakes
 might be close on the phylogenetic tree,
 but mistaking a rattler for a garter could be deadly.
 
-#### Tagging
+#### Тэгирование
 
 Some classification problems fit neatly
 into the binary or multiclass classification setups.
@@ -748,7 +745,7 @@ until each article can have a proper manual review.
 Indeed, for several years, the BioASQ organization
 has [hosted competitions](http://bioasq.org/) to do precisely this.
 
-#### Search 
+#### Поиск 
 
 Sometimes we do not just want to assign each example to a bucket
 or to a real value. In the field of information retrieval,
@@ -782,7 +779,7 @@ Nowadays, search engines use machine learning and behavioral models
 to obtain query-dependent relevance scores.
 There are entire academic conferences devoted to this subject.
 
-#### Recommender Systems
+#### Рекомендательные системы
 :label:`subsec_recommender_systems`
 
 Recommender systems are another problem setting
@@ -844,7 +841,7 @@ and in turn is recommended even more frequently.
 Many of these problems about how to deal with censoring,
 incentives, and feedback loops, are important open research questions.
 
-#### Sequence Learning
+#### Изучение последовательностей
 
 So far, we have looked at problems where we have
 some fixed number of inputs and produce a fixed number of outputs.
@@ -952,7 +949,7 @@ across long temporal distances.
 These are active areas of research.
 
 
-### Unsupervised learning
+### Обучение без учителя
 
 All the examples so far were related to supervised learning,
 i.e., situations where we feed the model a giant dataset
@@ -1015,7 +1012,7 @@ even complicated structured data like images and audio.
 The underlying statistical mechanisms are tests
 to check whether real and fake data are the same.
 
-### Interacting with an Environment
+### Взаимодействие с окружением
 
 So far, we have not discussed where data actually
 come from,
@@ -1071,7 +1068,7 @@ while the homework was composed by his teaching assistants.
 Next, we will briefly describe reinforcement learning,
 a setting that explicitly considers interactions with an environment.
 
-### Reinforcement Learning
+### Обучение с учителем
 
 If you are interested in using machine learning
 to develop an agent that interacts with an environment
@@ -1171,7 +1168,7 @@ When there is no state, just a set of available actions
 with initially unknown rewards, this problem
 is the classic *multi-armed bandit problem*.
 
-## Roots
+## Истоки
 
 We have just reviewed
 a small subset of problems that machine learning 
@@ -1283,7 +1280,7 @@ Unlike neural networks, they did not require weeks to train
 and provided predictable results with strong theoretical guarantees.
 
 
-## The Road to Deep Learning
+## Дорога к глубокому обучению
 
 Much of this changed with 
 the ready availability of large amounts of data,
@@ -1431,7 +1428,7 @@ Ph.D. students at Carnegie Mellon University in 2014.
 By now, this task can be accomplished with less than 10 lines of code,
 putting it firmly into the grasp of programmers.
 
-## Success Stories
+## Истории успеха
 
 AI has a long history of delivering results
 that would be difficult to accomplish otherwise.
@@ -1539,7 +1536,7 @@ With what we know today, this strikes us a much more pressing concern
 than the potential of malevolent superintelligence to destroy humanity.
 
 
-## Characteristics
+## Подведение итогов
 
 Thus far, we have talked about machine learning broadly, which is both a branch of AI and an approach to AI.
 Though deep learning is a subset of machine learning,
@@ -1608,7 +1605,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 
 
-## Summary
+## Вывод
 
 * Machine learning studies how computer systems can leverage experience (often data) to improve performance at specific tasks. It combines ideas from statistics, data mining, and optimization. Often, it is used as a means of implementing AI solutions.
 * As a class of machine learning, representational learning focuses on how to automatically find the appropriate way to represent data. Deep learning is multi-level representation learning through learning many layers of transformations.
@@ -1616,7 +1613,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 * Much of the recent progress in deep learning has been triggered by an abundance of data arising from cheap sensors and Internet-scale applications, and by significant progress in computation, mostly through GPUs.
 * Whole system optimization is a key component in obtaining high performance. The availability of efficient deep learning frameworks has made design and implementation of this significantly easier.
 
-## Exercises
+## Упражнения
 
 1. Which parts of code that you are currently writing could be "learned", i.e., improved by learning and automatically determining design choices that are made in your code? Does your code include heuristic design choices?
 1. Which problems that you encounter have many examples for how to solve them, yet no specific way to automate them? These may be prime candidates for using deep learning.
