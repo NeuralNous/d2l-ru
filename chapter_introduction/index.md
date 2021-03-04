@@ -96,161 +96,138 @@ $\{\text{yes}, \text{no}\}$
 исходя из того есть ли пробуждающее слово в этом примере?
 Если у вас не получается, то не беспокойтесь.
 Мы не знаем как написать такую программу с нуля как и вы.
-Вот зачем мы используем машинное обучени.
-We do not know how to write such a program from scratch either.
-That is why we use machine learning.
+Вот зачем мы используем машинное обучение.
 
 ![Определение пробуждающего слова.](../img/wake-word.svg)
 :label:`fig_wake_word`
 
 
-Here is the trick.
-Often, even when we do not know how to tell a computer
-explicitly how to map from inputs to outputs,
-we are nonetheless capable of performing the cognitive feat ourselves.
-In other words, even if you do not know
-how to program a computer to recognize the word "Alexa",
-you yourself are able to recognize it.
-Armed with this ability, we can collect a huge *dataset*
-containing examples of audio 
-and label those that do
-and that do not contain the wake word.
-In the machine learning approach, 
-we do not attempt to design a system
-*explicitly* to recognize wake words.
-Instead, we define a flexible program
-whose behavior is determined by a number of *parameters*.
-Then we use the dataset to determine the best possible set of parameters, 
-those that improve the performance of our program
-with respect to some measure of performance on the task of interest.
+Но вот подсказка.
+Часто, даже если мы не знаем как явно сказать компьютеру
+как связать выходы и входы мы все равно можем совершить этот
+подвиг сами.
+Другими словами, даже если вы не знаете как сказать
+компьютеру как распознавать слово Алекса, 
+вы сами способны его распознать.
+Вооружившись этой способностью мы можем собрать
+громадный *датасет* содержащий примеры аудио
+и метку. Датасет должен содержать примеры с
+и без нужного слова. В подходе машинного обучения
+мы не пытаемся создать систему явно для распознавания слов.
+Взамен мы создаём гибкую программу чъё поведение определяется
+числом *параметров*.
+Затем мы используем датасет для определения лучших параметров,
+которые могли бы улучшить производительность нашей программы
+основывася на измерении производительности которую мы зададим.
 
-You can think of the parameters as knobs that we can turn,
-manipulating the behavior of the program.
-Fixing the parameters, we call the program a *model*.
-The set of all distinct programs (input-output mappings)
-that we can produce just by manipulating the parameters
-is called a *family* of models.
-And the meta-program that uses our dataset
-to choose the parameters is called a *learning algorithm*.
+Вы можете предствить себе параметры как ручки которые мы можем
+повернуть изменяя поведение программы.
+Набор параметров мы называем *моделью*.
+Набор всех различных программ которые мы можем создать
+манипулируя параметрами мы называем семейством моделей.
+И метапрограмма которая использует наш датасет для
+подбора параметров называется обучающим алгоритмом.
 
-Before we can go ahead and engage the learning algorithm,
-we have to define the problem precisely,
-pinning down the exact nature of the inputs and outputs,
-and choosing an appropriate model family.
-In this case, 
-our model receives a snippet of audio as *input*,
-and the model 
-generates a selection among 
-$\{\text{yes}, \text{no}\}$ as *output*.
-If all goes according to plan 
-the model's guesses will
-typically be correct as to 
-whether the snippet contains the wake word.
+Прежде чем мы сможем идти дальше и взаимодействовать с 
+обучающими алгоритмами, мы должны определить
+проблему определив все выходы и входы и выбрав
+необходимое семейство моделей.
+В этом случае наша модель получает аудио как вход
+и затем выбирает между $\{\text{yes}, \text{no}\}$ и выводит это.
+Если всё идет по плану, то модель в большинстве будет
+права по вопросу содержит ли полученное аудио пробуждающее слово.
 
-If we choose the right family of models,
-there should exist one setting of the knobs
-such that the model fires "yes" every time it hears the word "Alexa".
-Because the exact choice of the wake word is arbitrary,
-we will probably need a model family sufficiently rich that,
-via another setting of the knobs, it could fire "yes"
-only upon hearing the word "Apricot".
-We expect that the same model family should be suitable
-for "Alexa" recognition and "Apricot" recognition
-because they seem, intuitively, to be similar tasks.
-However, we might need a different family of models entirely
-if we want to deal with fundamentally different inputs or outputs,
-say if we wanted to map from images to captions,
-or from English sentences to Chinese sentences.
+Если мы выбираем правильное семейство моделей
+то должна существовать одна конфигурация параметров
+когда модель всегда говорит да при слове Алекса.
+Поскольку точный выбор слова пробуждения произволен,
+нам, вероятно, понадобится семейство моделей достаточно мощное,
+чтобы с помощью другой настройки ручек оно могло бы выдать "да"
+только услышав любое другое конкретное слово.
+Мы ожидаем, что одно и то же модельное семейство должно быть подходящим
+для распознавания "Алекса" и "Абрикос"
+потому что интуитивно они кажутся похожими задачами.
+Однако нам может понадобиться совершенно другое семейство моделей
+, если мы хотим иметь дело с принципиально другими входами или выходами,
+, скажем, если мы хотим сопоставить изображения с подписями,
+или английские предложения с китайскими предложениями.
 
-As you might guess, if we just set all of the knobs randomly,
-it is unlikely that our model will recognize "Alexa",
-"Apricot", or any other English word.
-In machine learning, 
-the *learning* is the process
-by which we discover the right setting of the knobs
-coercing the desired behavior from our model.
-In other words,
-we *train* our model with data.
-As shown in :numref:`fig_ml_loop`, the training process usually looks like the following:
+Как вы могли понять если мы просто установим все рычаги случайно, 
+то не вероятность того что модель сработает правильно крайне мала.
+В машинном обучении процесс *обучения* состооит в том, что
+мы определяем правильные настройки ручек принуждая нашу
+модель к правильному поведению. Другими словами
+мы обучаем модель данными.
+Как показано в :numref:`fig_ml_loop`, процесс обучения выглядит так:
 
-1. Start off with a randomly initialized model that cannot do anything useful.
-1. Grab some of your data (e.g., audio snippets and corresponding $\{\text{yes}, \text{no}\}$ labels).
-1. Tweak the knobs so the model sucks less with respect to those examples.
-1. Repeat Step 2 and 3 until the model is awesome.
+1. Начинаем с моделью со случайно инициализированными весами.
+2. Возьмите часть своих данных (например аудио и соответсвующие метки $\{\text{yes}, \text{no}\}$).
+3. Подправьте ручки так, чтобы модель меньше ошибалась по отношению к этим примерам.
+4. Повторите пункт 2-3 пока модель не начнёт работать хорошо.
 
-![A typical training process.](../img/ml-loop.svg)
+![Типичный процесс обучения.](../img/ml-loop.svg)
 :label:`fig_ml_loop`
 
-To summarize, rather than code up a wake word recognizer,
-we code up a program that can *learn* to recognize wake words,
-if we present it with a large labeled dataset.
-You can think of this act of determining a program's behavior
-by presenting it with a dataset as *programming with data*.
-That is to say,
-we can "program" a cat detector by providing our machine learning system
-with many examples of cats and dogs.
-This way the detector will eventually learn to emit a very large positive number if it is a cat, a very large negative number if it is a dog,
-and something closer to zero if it is not sure,
-and this barely scratches the surface of what machine learning can do.
-Deep learning,
-which we will explain in greater detail later,
-is just one among many popular methods
-for solving machine learning problems.
+Подводя итог, можно сказать, что вместо того, чтобы явно писать распознаватель слов пробуждения,
+мы пишем программу, которая может *научиться* распознавать слова пробуждения,
+если мы представим ей большой датасет.
+Вы можете думать об определении поведения программы
+, представляя ее работу с набором данных как *программирование с данными*.
+То есть
+мы можем "запрограммировать" детектор кошек, предоставив нашей системе машинного обучения
+множество примеров кошек и собак.
+Таким образом, детектор в конечном итоге научится выдавать очень большое положительное число, если это кошка, и очень большое отрицательное число, если это собака,
+и что-то ближе к нулю, если не уверен,
+Глубокое обучение,
+о котором мы расскажем подробнее позже,
+является лишь одним из многих популярных методов
+решения задач машинного обучения.
 
 ## Ключевые компоненты
 
-In our wake word example, we described a dataset
-consisting of audio snippets and binary labels, 
-and we
-gave a hand-wavy sense of how we might train
-a model to approximate a mapping from snippets to classifications.
-This sort of problem, 
-where we try to predict a designated unknown label
-based on known inputs
-given a dataset consisting of examples
-for which the labels are known, 
-is called *supervised learning*.
-This is just one among many kinds of machine learning problems.
-Later we will take a deep dive into different machine learning problems.
-First, we would like to shed more light on some core components
-that will follow us around, no matter what kind of machine learning problem we take on:
+В нашем примере с пробуждающим словом мы определили что такое
+датасет состоящий из аудио файлов и бинарынх меток,
+а так же получить примерное представление о том как
+модель обучается апроксимизировать свзяь между аудио
+и метками.
+Этот пример проблемы где мы пытаемся предсказать
+необходимую неизвестную метку основывясь на известных
+входах и имея датасет содержащий примеры аудио с известными
+метками называется *обучение с учителем*.
 
-1. The *data* that we can learn from.
-1. A *model* of how to transform the data.
-1. An *objective function* that quantifies how well (or badly) the model is doing.
-1. An *algorithm* to adjust the model's parameters to optimize the objective function.
+Это лишь одна из многих проблем машинного обучения.
+Позже мы глубоко погрузимся в различные проблемы машинного обучения.
+Во-первых, мы хотели бы пролить больше света на некоторые основные компоненты
+которые будут следовать за нами повсюду, независимо от того, какую проблему машинного обучения мы возьмем на себя:
+
+1. *Данные* на основании которых мы будем обучаться
+1. *Модель* для преобразования данных
+1. *Функция потерь* которая определяет то как хорошо или плохо справляется модель.
+1. *Алгоритм* оптимизирующий параметры модели для повышения её производительности.
 
 ### Данные
 
-It might go without saying that you cannot do data science without data.
-We could lose hundreds of pages pondering what precisely constitutes data,
-but for now, we will err on the practical side
-and focus on the key properties to be concerned with.
-Generally, we are concerned with a collection of examples.
-In order to work with data usefully, 
-we typically
-need to come up with a suitable numerical representation.
-Each *example* (or *data point*, *data instance*, *sample*) typically consists of a set
-of attributes called *features* (or *covariates*),
-from which the model must make its predictions.
-In the supervised learning problems above,
-the thing to predict
-is a special attribute 
-that is designated as
-the *label* (or *target*).
+Можно сказать что вы не можете заниматься Data Science без данных.
+Мы могли бы написать сотни страниц, размышляя о том, что именно из себя представляют данные,
+но сейчас мы остановимся на практической стороне
+и сосредоточимся на ключевых свойствах, которые должны быть затронуты.
+Как правило, мы имеем дело с набором примеров.
+Для того чтобы работать с данными,
+мы обычно должны придумать подходящее
+числовое представление.
+Каждый пример обычно состоит из набора признаков из которых моделль составляет свои предсказания.
+В проблеме обучения с учителем о кооторой мы говорили выше то что нам нужно предсказывать
+представляет из себя метку.
 
-
-If we were working with image data,
-each individual photograph might constitute an example,
-each represented by an ordered list of numerical values
-corresponding to the brightness of each pixel.
-A $200\times 200$ color photograph would consist of $200\times200\times3=120000$
-numerical values, corresponding to the brightness
-of the red, green, and blue channels for each spatial location.
-In another traditional task, we might try to predict
-whether or not a patient will survive,
-given a standard set of features such as
-age, vital signs, and diagnoses.
+Если бы мы работали с фотографиями, то каждая
+отдельная фотография могла бы быть одной записью в датасете.
+Запись представлялась бы упорядоченным списком численных значений
+соответсвующих яркости каждого пикселя.
+Цветное фото $200\times 200$ содержала бы $200\times200\times3=120000$
+численных значений соответсвующих яркости
+красного, зелёного и голубого каналов в каждой отдельно взятой позиции.
+В другой традициональной задаче мы пытаемся предсказать выживет пациент или нет
+основываясь на стандартном наборе признак
 
 When every example is characterized by the same number of numerical values,
 we say that the data consist of fixed-length vectors
